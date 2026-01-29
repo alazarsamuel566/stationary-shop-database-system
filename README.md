@@ -133,6 +133,11 @@ This diagram represents the logical database design of a stationary shop managem
 
 ![Logical_design](images/logical_design.jpg)
 
+## Conceptual Design 
+This ER diagram illustrates the logical structure of an inventory management system, centering on the PRODUCT entity as the primary hub of data. It establishes a classification system where each product is linked to a specific CATEGORY and sourced from a designated SUPPLIER. The model ensures precise tracking of physical items by maintaining a direct one-to-one relationship between a product and its current STOCK levels. Additionally, it captures the operational history of the warehouse by recording every INVENTORY_MOVEMENT, such as stock-ins or stock-outs. Finally, the system incorporates accountability by linking each movement record to a SHOP_OWNER, identifying exactly which user authorized the transaction.
+
+![Conceptual_design](images/conceptual_design.png)
+
 ### Relationship Details
 
 1. **shopOwner to inventory_movement**: One-to-Many

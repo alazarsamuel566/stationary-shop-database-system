@@ -132,7 +132,7 @@ product (1) ----< (Many) inventory_movement
 This diagram represents the logical database design of a stationary shop management system. It shows the main entities: Category, Supplier, Product, Stock, Inventory Movement, and Shop Owner. Each entity contains attributes that describe its data structure. Relationships between entities define how data is connected in the system. Products are linked to categories and suppliers. Stock records track the available quantity of each product. Inventory movements and shop owners record and manage all stock transactions.
 
 <p align="center">
-<img src="images/logical_design.png" width="300" height="600">
+<img src="images/logical_design.png" width="500" height="800">
 </p>
 
 ## Conceptual Design 

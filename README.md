@@ -398,14 +398,18 @@ The database schema for this project was implemented by distributing development
 - **Alazar Samuel**
 - Designed, implemented, and committed the `Category` table
 - Designed, implemented, and committed the `Stock` table
+- Readme file
 
 
 - **Tesfaye Abel**
 - Designed, implemented, and committed the `Product` table
+- Added Trigger after product insertion
 
 
 - **Nahom Torba**
 - Designed, implemented, and committed the `InventoryMovement` table
+- Trigger for inventory movement
+- views for inentory status and low stock
 
 
 ## Notes

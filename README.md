@@ -115,6 +115,76 @@ Records all stock movements (incoming, outgoing, and adjustments).
 
 **Purpose:** Provides complete audit trail of all inventory transactions for accountability and reporting.
 
+
+## Triggers
+
+Triggers are automatic database programs that execute when specific events such as INSERT or UPDATE occur on a table.
+
+### after_product_insert.sql
+- Trigger Type: AFTER INSERT  
+- Table: product  
+
+**Purpose:**  
+Automatically updates the inventory when a new product is added. This ensures every product inserted into the product table is reflected in the inventory table.
+
+**Why it is important:**  
+- Prevents missing inventory entries  
+- Reduces manual work  
+- Keeps product and inventory data synchronized  
+
+### before_inventory_management.sql
+- Trigger Type: BEFORE INSERT or UPDATE  
+- Table: inventory / inventory_management  
+
+**Purpose:**  
+Validates inventory data before saving. It prevents negative stock values and invalid quantities.
+
+**Why it is important:**  
+- Prevents incorrect stock data  
+- Enforces business rules at database level  
+- Improves data integrity  
+
+### after_inventory_management.sql
+- Trigger Type: AFTER UPDATE  
+- Table: inventory / inventory_management  
+
+**Purpose:**  
+Executes after inventory changes. Used for logging stock changes, updating related tables, or triggering alerts.
+
+**Why it is important:**  
+- Keeps inventory changes consistent  
+- Helps track stock movement  
+- Supports reporting and monitoring  
+
+---
+
+## Views
+
+Views are virtual tables created using SELECT queries. They simplify complex queries and provide readable summaries.
+
+### inventory_status.sql
+- View Name: inventory_status  
+
+**Purpose:**  
+Displays current inventory status for each product, including stock quantity and availability.
+
+**Use cases:**  
+- Inventory dashboard  
+- Admin monitoring  
+- Stock availability checks  
+
+### low_stock_product.sql
+- View Name: low_stock_product  
+
+**Purpose:**  
+Lists products whose stock quantity is below the defined low stock threshold.
+
+**Why it is important:**  
+- Identifies products that need restocking  
+- Helps avoid stock shortages  
+- Supports inventory planning  
+
+
 ---
 
 ## Database Relationships
